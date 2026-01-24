@@ -12,14 +12,10 @@ function App() {
     age: 23
   }];
   return (
-    <div className="App">
-      <header className="App-header">
-        {
-          userData.map((first, index) => <NameCard name={first.name} age={first.age}></NameCard>)
-        }
-        
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<posts />} />
+      <Route path="/posts/:id" element={<posts />} />
+    </Routes>
   );
 }
 
